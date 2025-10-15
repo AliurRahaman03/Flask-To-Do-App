@@ -1,3 +1,3 @@
 from .models import Task
 
-__all__ = ["Task"]
+__all__ = ["Task","User"]

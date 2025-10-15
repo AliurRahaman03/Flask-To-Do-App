@@ -27,3 +27,8 @@ def logout():
     session.pop("user", None)
     flash("Loged out", "info")
     return redirect(url_for("auth.login"))
+
+@auth_bp.route("/register", methods=["GET","POST"])
+def register():
+    if request.method == "POST":
+        id = request.form.get()
