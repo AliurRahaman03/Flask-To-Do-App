@@ -8,7 +8,7 @@ class Task(db.Model):
 
 class User(db.Model):
     username = db.Column(db.Integer, nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False primary_key=True)
+    email = db.Column(db.String(120), unique=True, nullable=False, primary_key=True)
     password_hash = db.Column(db.String(128), nullable=False)
 
     def set_password(self, password: str):
